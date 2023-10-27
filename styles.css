@@ -1,0 +1,115 @@
+/* Global styles, the solutions are described below */ 
+h1
+{
+    text-align: center;
+}
+
+.section
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.container {
+    max-width: min(95%, 120rem);
+    margin: 0 auto;
+}
+
+details
+{
+    text-align: center;
+    width: 100%;
+}
+
+summary
+{
+    list-style: none;
+    padding: 5px;
+    background-color:chocolate;
+    color: white;
+    font-weight: bold;
+}
+
+summary::-webkit-details-marker
+{
+    display: none;
+}
+
+summary:hover
+{
+    cursor: pointer;
+}
+
+.details_list
+{
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+
+.details_list li
+{
+    padding: 5px;
+    color: white;
+    background-color: chocolate;
+    outline: 1px solid white;
+}
+
+.details_list li:hover
+{
+    color: chocolate;
+    background-color: white;
+    outline-color: chocolate;
+}
+
+/* JavaScript solution */
+
+@keyframes opening
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes closing
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+.details_anim_open
+{
+    animation: opening .3s ease;
+}
+
+.details_anim_close
+{
+    animation: closing .3s ease;
+}
+
+/* Pure CSS solution */
+
+
+.details_dropdown2
+{
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.details2[open] + .details_dropdown2
+{
+    opacity: 1;
+    transition: opacity .3s ease;
+}
