@@ -111,5 +111,4 @@ summary:hover
 .details2[open] + .details_dropdown2
 {
     opacity: 1;
-    transition: opacity .3s ease;
 }
