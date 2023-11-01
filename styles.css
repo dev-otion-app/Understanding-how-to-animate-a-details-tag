@@ -77,18 +77,6 @@ summary:hover
     }
 }
 
-@keyframes closing
-{
-    0%
-    {
-        opacity: 1;
-    }
-    100%
-    {
-        opacity: 0;
-    }
-}
-
 .details_anim_open
 {
     animation: opening .3s ease;
@@ -96,7 +84,7 @@ summary:hover
 
 .details_anim_close
 {
-    animation: closing .3s ease;
+    animation: opening .3s ease reverse;
 }
 
 /* Pure CSS solution */
